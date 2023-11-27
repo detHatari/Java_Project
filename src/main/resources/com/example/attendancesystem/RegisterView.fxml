@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.attendancesystem.login.registerController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="14.0" prefHeight="390.0" prefWidth="600.0">
+         <children>
+            <ImageView fitHeight="79.0" fitWidth="478.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@CADT-IDT-Logos-White_CADT-IDT-Lockup-1-Khmer-English.png" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="CENTER" text="Register Form" textFill="#ff8a00">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="560.0">
+               <children>
+                  <TextField fx:id="usernameTextField" prefHeight="53.0" prefWidth="449.0" promptText="Username ">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="72.0" prefHeight="87.0" prefWidth="589.0">
+               <children>
+                  <PasswordField fx:id="passwordField" prefHeight="53.0" prefWidth="450.0" promptText="Password">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="60.0" />
+                     </HBox.margin>
+                  </PasswordField>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="18.0" prefWidth="571.0">
+               <children>
+                  <PasswordField fx:id="confirmPasswordField" prefHeight="53.0" prefWidth="450.0" promptText="Comfirm Password">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <Button mnemonicParsing="false" onAction="#OnCreateButton" prefHeight="42.0" prefWidth="80.0" text="Create" textFill="#ff7700">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

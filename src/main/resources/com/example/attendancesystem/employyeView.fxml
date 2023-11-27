@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.attendancesystem.Student.employeeController">
+   <children>
+      <VBox alignment="TOP_CENTER" blendMode="DARKEN" depthTest="DISABLE" layoutX="9.0" layoutY="10.0" prefHeight="380.0" prefWidth="583.0" style="-fx-background-color: lightgreen;">
+         <children>
+            <Label text="Employee Information">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="542.0">
+               <children>
+                  <Label prefHeight="36.0" prefWidth="97.0" text="Name   :">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="input_name" onAction="#OnSubmitButton" prefHeight="54.0" prefWidth="345.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="57.0" prefHeight="45.0" prefWidth="542.0">
+               <children>
+                  <Label prefHeight="36.0" prefWidth="97.0" text="Gender :">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="input_gender" onAction="#OnSubmitButton" prefHeight="54.0" prefWidth="345.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="57.0" prefHeight="45.0" prefWidth="542.0">
+               <children>
+                  <Label prefHeight="36.0" prefWidth="97.0" text="Age      :">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="input_age" prefHeight="54.0" prefWidth="345.0" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="57.0" prefHeight="45.0" prefWidth="542.0">
+               <children>
+                  <Label prefHeight="36.0" prefWidth="97.0" text="ID         :">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="input_id" onAction="#OnSubmitButton" prefHeight="36.0" prefWidth="346.0" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" layoutX="20.0" layoutY="57.0" prefHeight="45.0" prefWidth="542.0">
+               <children>
+                  <Label prefHeight="36.0" prefWidth="97.0" text="Salary   :">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="input_salary" onAction="#OnSubmitButton" prefHeight="54.0" prefWidth="345.0" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="90.0" prefWidth="417.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#OnListButton" prefHeight="54.0" prefWidth="104.0" text="List" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="120.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#OnSubmitButton" prefHeight="61.0" prefWidth="125.0" text="Submit">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets right="100.0" />
+               </VBox.margin>
+            </HBox>
+            <Label fx:id="label_message" prefHeight="20.0" prefWidth="144.0" textFill="#da1111">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
