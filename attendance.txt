@@ -1,0 +1,5 @@
+det,123,OOP,8:30 AM - 10:00 AM,2023-11-01,Absent
+kea,1234,BasicElectronic,10:15 AM - 11:45 AM,2023-11-02,Absent
+sdasd,123123,MATH,10:15 AM - 11:45 AM,2023-11-29,Not in the present
+ascvccvx,123221,CCNA,2:30 PM - 4:15 PM,2023-11-28,Present
+Det,0909,BasicElectronic,8:30 AM - 10:00 AM,2023-11-28,Present

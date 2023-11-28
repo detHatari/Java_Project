@@ -10,4 +10,6 @@ module com.example.attendancesystem {
     opens com.example.attendancesystem.login to javafx.fxml;
     exports com.example.attendancesystem.Student;
     opens com.example.attendancesystem.Student to javafx.fxml;
+    exports com.example.attendancesystem.Teacher;
+    opens com.example.attendancesystem.Teacher to javafx.fxml;
 }

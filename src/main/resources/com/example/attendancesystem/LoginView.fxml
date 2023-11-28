@@ -10,16 +10,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.attendancesystem.login.logincontroller">
+<AnchorPane prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.attendancesystem.login.logincontroller">
    <children>
-      <VBox alignment="TOP_CENTER" layoutX="4.0" layoutY="4.0" prefHeight="400.0" prefWidth="600.0">
+      <VBox alignment="TOP_CENTER" layoutX="4.0" layoutY="4.0" prefHeight="400.0" prefWidth="783.0">
          <children>
-            <ImageView fitHeight="79.0" fitWidth="478.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="111.0" fitWidth="485.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@CADT-IDT-Logos-White_CADT-IDT-Lockup-1-Khmer-English.png" />
                </image>
             </ImageView>
-            <Label contentDisplay="CENTER" text="Login Form" textFill="#ff8a00">
+            <Label contentDisplay="CENTER" prefHeight="27.0" prefWidth="101.0" text="Login Form" textFill="#ff8a00">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -32,7 +32,7 @@
                <children>
                   <TextField fx:id="usernameTextField" prefHeight="53.0" prefWidth="449.0" promptText="Username ">
                      <HBox.margin>
-                        <Insets left="60.0" />
+                        <Insets left="150.0" />
                      </HBox.margin>
                      <font>
                         <Font size="26.0" />
@@ -47,7 +47,7 @@
                <children>
                   <PasswordField fx:id="passwordField" prefHeight="53.0" prefWidth="450.0" promptText="Password">
                      <HBox.margin>
-                        <Insets left="60.0" />
+                        <Insets left="150.0" />
                      </HBox.margin>
                      <font>
                         <Font size="26.0" />

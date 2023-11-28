@@ -135,7 +135,7 @@ public class logincontroller {
         } else if (enterUsername.equals(adminUsername) && enterPassword.equals(adminPassword)) {
             // Admin login
             loginMessagelabel.setText("Admin login successful");
-            openMainView(event);
+            openTeacherView(event);
         } else if (users != null) {
             // User login
             boolean userAuthenticated = false;
@@ -148,14 +148,14 @@ public class logincontroller {
 
             if (userAuthenticated) {
                 loginMessagelabel.setText("User login successful");
-                openMainView(event);
+                openStudentView(event);
             } else {
                 loginMessagelabel.setText("Incorrect username or password");
             }
         }
     }
-    private void openMainView(ActionEvent event) throws IOException {
-        VBox root = FXMLLoader.load(LoginFormApp.class.getResource("StudentView.fxml"));
+    private void openStudentView(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(LoginFormApp.class.getResource("StudentView.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setTitle("View");
@@ -164,6 +164,18 @@ public class logincontroller {
         stage.setScene(scene);
         stage.show();
     }
+
+    private void openTeacherView(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(LoginFormApp.class.getResource("StudentList.fxml"));
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root,762,400);
+        stage.setTitle("View");
+        stage.setWidth(stage.getWidth());
+        stage.setHeight(stage.getHeight());
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
 
 //    public void onLogin(ActionEvent event) throws IOException {
