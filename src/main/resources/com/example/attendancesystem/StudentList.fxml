@@ -27,12 +27,18 @@
       <HBox layoutX="20.0" layoutY="46.0" prefHeight="47.0" prefWidth="586.0">
          <children>
             <TextField fx:id="SearchNameTextField" promptText="Search Student Name" />
-            <Button mnemonicParsing="false" onAction="#OnSearchName" text="Search">
+            <Button mnemonicParsing="false" onAction="#OnSearchName" prefHeight="31.0" prefWidth="70.0" text="Search">
                <HBox.margin>
                   <Insets left="20.0" />
                </HBox.margin>
             </Button>
+            <Button mnemonicParsing="false" onAction="#OnRemoveButton" prefHeight="30.0" prefWidth="78.0" text="Remove">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Button>
          </children>
       </HBox>
+      <Button layoutX="628.0" layoutY="336.0" mnemonicParsing="false" onAction="#OnClearButton" prefHeight="49.0" prefWidth="96.0" text="Clear" />
    </children>
 </AnchorPane>

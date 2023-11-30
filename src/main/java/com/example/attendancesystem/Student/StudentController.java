@@ -84,9 +84,12 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import com.example.attendancesystem.LoginFormApp;
+import com.example.attendancesystem.login.User;
+import com.example.attendancesystem.login.Userdata;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -138,23 +141,92 @@ public class StudentController implements Initializable {
         LocalDate date = pickDate.getValue();
         String attendance;
 
-        LocalDate currentDate = LocalDate.now();
-        if (date.isEqual(currentDate)) {
-            attendance = "Present";
-        } else if (date.isAfter(currentDate)) {
-            attendance = "Not in the present";
-        } else {
-            attendance = "Absent";
-        }
-        message.setText("Save Successfully!");
+        List<User> users = Userdata.loadUsers();
 
-        // Store attendance data into a file(which is attendance.txt)
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter("attendance.txt", true))) {
-            writer.write(name + "," + id + "," + course + "," + time + "," + date.toString() + "," + attendance + "\n");
-        } catch (IOException e) {
-            e.printStackTrace();
+        // Check if the entered name exists in the list of users
+        boolean isUserValid = users.stream().anyMatch(user -> user.getUsername().equals(name));
 
+        if (!isUserValid) {
+            message.setText("Invalid user name");
+            return; // exit the method if the username is invalid
         }
+
+            LocalDate currentDate = LocalDate.now();
+            if (date.isEqual(currentDate)) {
+                attendance = "Present";
+            } else if (date.isAfter(currentDate)) {
+                attendance = "Not in the present";
+            } else {
+                attendance = "Absent";
+            }
+            message.setText("Attendance Added!");
+
+            // Store attendance data into a file(which is attendance.txt)
+            try (BufferedWriter writer = new BufferedWriter(new FileWriter("attendance.txt", true))) {
+                writer.write(name + "," + id + "," + course + "," + time + "," + date.toString() + "," + attendance + "\n");
+            } catch (IOException e) {
+                e.printStackTrace();
+
+            }
+        }
+
+
+
+//    @FXML
+//    public void onSubmit(ActionEvent event) {
+//        // Get user input
+//        String username = inputName.getText().trim();
+//        List<User> users = Userdata.loadUsers();
+//        User authenticatedUser = authenticateUser(username, "", users);
+//
+//        // Check if the user is authenticated
+//        if (authenticatedUser != null) {
+//            LocalDate currentDate = LocalDate.now();
+//            LocalDate date = pickDate.getValue();
+//            String attendance;
+//
+//            // Determine attendance based on the date
+//            if (date.isEqual(currentDate)) {
+//                attendance = "Present";
+//            } else if (date.isAfter(currentDate)) {
+//                attendance = "Not in the present";
+//            } else {
+//                attendance = "Absent";
+//            }
+//
+//            // Store attendance data into a file (attendance.txt)
+//            boolean success = storeAttendance(username, inputID.getText(), pickCourse.getValue(), pickTime.getValue(), date, attendance);
+//
+//            // Provide feedback to the user
+//            if (success) {
+//                message.setText("Attendance Added Successfully!");
+//            } else {
+//                message.setText("Error adding attendance. Please try again.");
+//            }
+//        } else {
+//            // Invalid user
+//            message.setText("Invalid username");
+//        }
+//    }
+//
+//    // Method to store attendance data into a file
+//    private boolean storeAttendance(String username, String id, String course, String time, LocalDate date, String attendance) {
+//        try (BufferedWriter writer = new BufferedWriter(new FileWriter("attendance.txt", true))) {
+//            writer.write(username + "," + id + "," + course + "," + time + "," + date.toString() + "," + attendance + "\n");
+//            return true;  // Successfully added attendance
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            return false; // Failed to add attendance
+//        }
+//    }
+
+    private User authenticateUser(String username, String password, List<User> users) {
+        for (User user : users) {
+            if (user.getUsername().equals(username) && user.getPassword().equals(password)) {
+                return user;
+            }
+        }
+        return null;
     }
 
     @FXML

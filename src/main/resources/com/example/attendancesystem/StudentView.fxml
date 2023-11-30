@@ -11,7 +11,7 @@
       <VBox layoutY="-2.0" prefHeight="406.0" prefWidth="239.0" style="-fx-background-color: fa9664;" />
       <VBox alignment="TOP_CENTER" layoutX="211.0" prefHeight="404.0" prefWidth="585.0">
          <children>
-            <Label text="Student Attendance List" textFill="#ff7512">
+            <Label text="Student Attendance " textFill="#ff7512">
                <font>
                   <Font name="Cooper Black" size="23.0" />
                </font>
@@ -54,22 +54,19 @@
                         <Font name="Cooper Black" size="18.0" />
                      </font>
                   </Label>
+                  <Label fx:id="message" layoutX="254.0" layoutY="267.0" prefHeight="21.0" prefWidth="126.0" textFill="#ea5353" />
                </children>
             </AnchorPane>
             <HBox alignment="CENTER_RIGHT" prefHeight="67.0" prefWidth="390.0">
                <children>
                   <Button mnemonicParsing="false" onAction="#OnBackButton" prefHeight="56.0" prefWidth="95.0" style="-fx-background-color: fa9664;" text="Back" textFill="WHITE">
                      <HBox.margin>
-                        <Insets right="230.0" />
+                        <Insets right="310.0" />
                      </HBox.margin>
                      <font>
                         <Font name="Cooper Black" size="16.0" />
                      </font>
                   </Button>
-                  <Label fx:id="message" textFill="#ea5353">
-                     <HBox.margin>
-                        <Insets right="90.0" />
-                     </HBox.margin></Label>
                   <Button mnemonicParsing="false" onAction="#onSubmit" prefHeight="56.0" prefWidth="95.0" style="-fx-background-color: fa9664;" text="Submit" textAlignment="CENTER" textFill="WHITE">
                      <HBox.margin>
                         <Insets right="30.0" />

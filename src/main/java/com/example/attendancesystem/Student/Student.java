@@ -129,6 +129,18 @@ public class Student {
         return name.get();
     }
 
+    public String getId() {
+        return id.get();
+    }
+
+    public StringProperty idProperty() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id.set(id);
+    }
+
     // Getter and setter for time
     public StringProperty timeProperty() {
         return time;
