@@ -120,7 +120,7 @@ public class StudentListController implements Initializable {
 
     @FXML
     private void OnSearchName(ActionEvent event) throws IOException {
-        String searchName = SearchNameTextField.getText().trim().toLowerCase();
+        String searchName = SearchNameTextField.getText().trim();
 
         studentList.clear();
 
@@ -129,7 +129,7 @@ public class StudentListController implements Initializable {
             while ((line = reader.readLine()) != null) {
                 String[] data = line.split(",");
                 if (data.length == 6) {
-                    String name = data[0].trim().toLowerCase();
+                    String name = data[0].trim();
                     if (name.contains(searchName)) {
                         String id = data[1].trim();
                         String course = data[2].trim();

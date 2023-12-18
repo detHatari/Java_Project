@@ -86,7 +86,6 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
-
 import com.example.attendancesystem.LoginFormApp;
 import com.example.attendancesystem.login.User;
 import com.example.attendancesystem.login.Userdata;
@@ -166,9 +165,8 @@ public class StudentController implements Initializable {
                 writer.write(name + "," + id + "," + course + "," + time + "," + date.toString() + "," + attendance + "\n");
             } catch (IOException e) {
                 e.printStackTrace();
-
             }
-        }
+    }
 
 
 
